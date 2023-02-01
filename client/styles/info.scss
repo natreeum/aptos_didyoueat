@@ -1,0 +1,32 @@
+.info{
+    background-color: var(--main-bg-color);
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    &__p{
+        margin:50px;
+        font-family: var(--font-kor-nomo);
+    }
+    &__row{
+        height: 40px;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+    }
+    &__submit{
+        width: 200px;
+        height: 50px;
+        border:none;
+        background-color: var(--point-color);
+
+    }
+
+    &__row2{
+        margin-top: 200px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+}

@@ -1,0 +1,117 @@
+.admin {
+  color: var(--main-bg-color);
+  height: 100%;
+  background: radial-gradient(ellipse at bottom, var(--main-text-color) 0%, #090a0f 100%);
+
+  overflow: hidden;
+  &__h1 {
+    font-size: 40px;
+    margin-bottom: 30px;
+    text-align: center;
+    color: var(--point-color);
+  }
+  &__heading-container {
+    margin: auto;
+
+    padding-top: 135px;
+    padding-bottom: 80px;
+    max-width: 990px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  &__button {
+    background-color: var(--main-text-color);
+    padding: 12px 22px;
+    border: 2px solid transparent;
+    border-radius: 30px;
+    cursor: pointer;
+  }
+  &-button__container {
+    padding: 2px;
+    border-radius: 999px;
+    background: linear-gradient(to right, white, 25%, var(--point-color));
+
+    & > a {
+      color: var(--main-bg-color);
+      text-decoration: none;
+    }
+  }
+  &__contact {
+    margin-top: 220px;
+    border-top: 0.5px solid #d2d2d7;
+    background-color: #000;
+    color: #ddd;
+
+    &__content {
+      width: 990px;
+      margin: auto;
+      padding-top: 21px;
+      padding-bottom: 21px;
+      font-size: 12px;
+      font-family: "SF Pro KR", "SF Pro Text", "SF Pro Icons", "Apple Gothic", "HY Gulim", "MalgunGothic", "HY Dotum",
+        "Lexi Gulim", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
+      font-weight: lighter;
+    }
+  }
+}
+
+.admin-header {
+  color: var(--main-bg-color);
+  position: sticky;
+  top: 0;
+  height: 44px;
+  background-color: rgba(0, 0, 0, 0.5);
+  color: rgba(#daff5b, 0.9);
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  &__container {
+    max-width: 990px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+  }
+  &__li {
+    display: flex;
+    gap: 30px;
+  }
+  & > div {
+    cursor: pointer;
+  }
+}
+
+.admin-footer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #6e6e73;
+  color: #d2d2d7;
+  font-size: 11px;
+  letter-spacing: 0;
+  font-family: "SF Pro KR", "SF Pro Text", "SF Pro Icons", "Apple Gothic", "HY Gulim", "MalgunGothic", "HY Dotum",
+    "Lexi Gulim", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
+
+  &__note {
+    width: 990px;
+    padding-top: 17px;
+    padding-bottom: 11px;
+    border-bottom: 0.7px solid #d2d2d7;
+    & > div {
+      margin: 1px 0;
+    }
+  }
+  &__content {
+    width: 990px;
+    padding: 17px 0 21px;
+  }
+  &__copyright {
+    margin-top: 5px;
+  }
+  &__service-description {
+    margin: 5px 0;
+  }
+}

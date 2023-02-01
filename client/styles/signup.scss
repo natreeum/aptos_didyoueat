@@ -1,0 +1,212 @@
+.admin-signup {
+  background-color: var(--main-text-color);
+  color: var(--main-bg-color);
+  &__container {
+    padding: 80px 0 120px;
+    max-width: 990px;
+    margin: auto;
+  }
+  &__heading {
+    border-bottom: 1px solid var(--footer-color);
+    border-top: 1px solid var(--footer-color);
+    height: 52px;
+    display: flex;
+    align-items: center;
+    & > h2 {
+      width: 990px;
+      margin: auto;
+      font-weight: 200;
+    }
+  }
+  &__title {
+    width: 990px;
+    margin: auto;
+    padding: 0 0 30px;
+    & > h1 {
+      text-align: center;
+      font-weight: 300;
+      font-size: 30px;
+    }
+    & > p {
+      margin-top: 10px;
+      text-align: center;
+      font-size: 12px;
+      line-height: 20px;
+      & span {
+        color: var(--point-color);
+        font-size: 10px;
+        cursor: pointer;
+      }
+    }
+  }
+
+  &__id {
+    display: flex;
+    justify-content: center;
+  }
+  &__id-description {
+    display: flex;
+    justify-content: center;
+    & > p {
+      width: 80%;
+      max-width: 400px;
+      color: var(--footer-color);
+      font-size: 12px;
+      line-height: 20px;
+    }
+  }
+  &__warning {
+    display: flex;
+    justify-content: center;
+    & > p {
+      width: 80%;
+      max-width: 400px;
+      color: #ff0033;
+      font-size: 12px;
+      line-height: 20px;
+    }
+  }
+  &__pw {
+    display: flex;
+    justify-content: center;
+  }
+  &__pw-check {
+    display: flex;
+    justify-content: center;
+  }
+
+  &__body {
+    & .input-area {
+      width: 80%;
+      max-width: 400px;
+    }
+
+    & {
+      & .label-placeholder {
+        position: absolute;
+        top: 50%;
+        left: 10px;
+        transform: translateY(-50%);
+        color: #ccc;
+        font-size: 16px;
+        cursor: text;
+        transition: 0.3s;
+        font-weight: 500;
+      }
+      & input {
+        position: relative;
+        background-color: var(--main-text-color);
+        color: var(--main-bg-color);
+        width: 100%;
+        height: 40px;
+        border: none;
+        outline: none;
+        border: 1px solid var(--footer-color);
+        border-radius: 5px;
+        padding-left: 10px;
+        font-size: inherit;
+        transition: all 0.2s ease-in-out;
+      }
+      & input:focus {
+        outline: 1px solid var(--main-bg-color);
+        border-bottom: 1px solid var(--footer-color);
+
+        caret-color: var(--point-color);
+      }
+
+      & input:not(:focus) + .is-written {
+        color: var(--main-bg-color);
+        font-size: 12px;
+        top: -10px;
+        left: 0;
+        font-weight: 300;
+      }
+
+      & input:focus-within + .label-placeholder {
+        color: var(--point-color);
+        font-size: 12px;
+        top: -10px;
+        left: 0;
+        font-weight: 300;
+      }
+      & input:focus ~ .password-validation__check {
+        opacity: 1;
+        visibility: visible;
+      }
+    }
+    .warning:not(:focus) {
+      outline: 1px solid red;
+      color: #ccc;
+      background-color: rgba(#ff0033, 0.2);
+    }
+    .warning:not(:focus) + .label-placeholder {
+      color: red;
+    }
+    .valid {
+      outline: 1px solid #0070c9;
+      color: #ccc;
+      background-color: rgba(#0070c9, 0.2);
+    }
+    .valid + .label-placeholder {
+      color: #0070c9 !important;
+    }
+  }
+}
+
+.button-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-top: 40px;
+}
+
+.none {
+  display: none;
+}
+
+.password-validation {
+  & svg {
+    fill: var(--footer-color);
+    width: 1em;
+  }
+  & > div {
+    display: flex;
+    align-items: center;
+    line-height: 20p;
+    margin: 5px 0;
+  }
+  & {
+    position: absolute; /*어떤 요소에 absolute를 주면 블럭요소는 inline으로 변경됨.*/
+    background-color: #fff;
+    width: max-content;
+    color: var(--footer-color);
+    top: 45px;
+    left: 30%;
+    font-size: 12px;
+    text-align: center;
+    padding: 10px;
+    border-radius: 5px;
+    transform: translateX(-50%); /*중앙배치 : X크기값을 50%만큼 이동*/
+    opacity: 0; /*이벤트설정 : 서서히 변하게 함*/
+    transition: 0.5s; /*어떤 변화가 요청되면 0.5초뒤에 일어나자.*/
+    z-index: 999;
+    visibility: hidden;
+  }
+  &:after {
+    content: ""; /*가상클래스 before, after는 무조건 content가 있어야 작동*/
+    position: absolute; /*상위클래스icon이 relative이므로, absolute로 설정하여 동적페이지에도 같은 위치로 유지*/
+    background-color: #fff;
+    width: 10px;
+    height: 10px;
+    transform: rotate(45deg) translateX(-50%); /*transform은 한 요소에 1번밖에 못쓰므로 합쳐줘야함*/
+    top: 0px;
+    left: 50%;
+  }
+
+  & > div:has(.green-svg) {
+    color: green;
+  }
+}
+.green-svg {
+  fill: green !important;
+}

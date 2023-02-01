@@ -1,0 +1,344 @@
+{
+  "contractName": "IERC5192",
+  "abi": [
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": false,
+          "internalType": "uint256",
+          "name": "tokenId",
+          "type": "uint256"
+        }
+      ],
+      "name": "Locked",
+      "type": "event"
+    },
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": false,
+          "internalType": "uint256",
+          "name": "tokenId",
+          "type": "uint256"
+        }
+      ],
+      "name": "Unlocked",
+      "type": "event"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "uint256",
+          "name": "tokenId",
+          "type": "uint256"
+        }
+      ],
+      "name": "locked",
+      "outputs": [
+        {
+          "internalType": "bool",
+          "name": "",
+          "type": "bool"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    }
+  ],
+  "metadata": "{\"compiler\":{\"version\":\"0.8.17+commit.8df45f5f\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"anonymous\":false,\"inputs\":[{\"indexed\":false,\"internalType\":\"uint256\",\"name\":\"tokenId\",\"type\":\"uint256\"}],\"name\":\"Locked\",\"type\":\"event\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":false,\"internalType\":\"uint256\",\"name\":\"tokenId\",\"type\":\"uint256\"}],\"name\":\"Unlocked\",\"type\":\"event\"},{\"inputs\":[{\"internalType\":\"uint256\",\"name\":\"tokenId\",\"type\":\"uint256\"}],\"name\":\"locked\",\"outputs\":[{\"internalType\":\"bool\",\"name\":\"\",\"type\":\"bool\"}],\"stateMutability\":\"view\",\"type\":\"function\"}],\"devdoc\":{\"events\":{\"Locked(uint256)\":{\"details\":\"If a token is minted and the status is locked, this event should be emitted.\",\"params\":{\"tokenId\":\"The identifier for a token.\"}},\"Unlocked(uint256)\":{\"details\":\"If a token is minted and the status is unlocked, this event should be emitted.\",\"params\":{\"tokenId\":\"The identifier for a token.\"}}},\"kind\":\"dev\",\"methods\":{\"locked(uint256)\":{\"details\":\"SBTs assigned to zero address are considered invalid, and queries about them do throw.\",\"params\":{\"tokenId\":\"The identifier for an SBT.\"}}},\"version\":1},\"userdoc\":{\"events\":{\"Locked(uint256)\":{\"notice\":\"Emitted when the locking status is changed to locked.\"},\"Unlocked(uint256)\":{\"notice\":\"Emitted when the locking status is changed to unlocked.\"}},\"kind\":\"user\",\"methods\":{\"locked(uint256)\":{\"notice\":\"Returns the locking status of an Soulbound Token\"}},\"version\":1}},\"settings\":{\"compilationTarget\":{\"project:/contracts/IERC5192Minimal.sol\":\"IERC5192\"},\"evmVersion\":\"london\",\"libraries\":{},\"metadata\":{\"bytecodeHash\":\"ipfs\"},\"optimizer\":{\"enabled\":false,\"runs\":200},\"remappings\":[]},\"sources\":{\"project:/contracts/IERC5192Minimal.sol\":{\"keccak256\":\"0xfaa25ff8315abd9f5447a724763e13b740f6b598a7b644165cd4eed7086fdc9f\",\"license\":\"CC0-1.0\",\"urls\":[\"bzz-raw://518416e2b07e8321deac4a07cf150e4ff55dc0fef0b4fbee2d2bf9d643511fb6\",\"dweb:/ipfs/QmXgF24nar8sJGhgm2Q1ei6gMSXTf8biZ31a1Frg7mZRLP\"]}},\"version\":1}",
+  "bytecode": "0x",
+  "deployedBytecode": "0x",
+  "immutableReferences": {},
+  "generatedSources": [],
+  "deployedGeneratedSources": [],
+  "sourceMap": "",
+  "deployedSourceMap": "",
+  "source": "// SPDX-License-Identifier: CC0-1.0\npragma solidity ^0.8.0;\n\ninterface IERC5192 {\n  /// @notice Emitted when the locking status is changed to locked.\n  /// @dev If a token is minted and the status is locked, this event should be emitted.\n  /// @param tokenId The identifier for a token.\n  event Locked(uint256 tokenId);\n\n  /// @notice Emitted when the locking status is changed to unlocked.\n  /// @dev If a token is minted and the status is unlocked, this event should be emitted.\n  /// @param tokenId The identifier for a token.\n  event Unlocked(uint256 tokenId);\n\n  /// @notice Returns the locking status of an Soulbound Token\n  /// @dev SBTs assigned to zero address are considered invalid, and queries\n  /// about them do throw.\n  /// @param tokenId The identifier for an SBT.\n  function locked(uint256 tokenId) external view returns (bool);\n}\n",
+  "sourcePath": "/home/kdm/hdd/project/BEB-07-final-DidYouEat/contracts/contracts/IERC5192Minimal.sol",
+  "ast": {
+    "absolutePath": "project:/contracts/IERC5192Minimal.sol",
+    "exportedSymbols": {
+      "IERC5192": [
+        26
+      ]
+    },
+    "id": 27,
+    "license": "CC0-1.0",
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 7,
+        "literals": [
+          "solidity",
+          "^",
+          "0.8",
+          ".0"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "36:23:1"
+      },
+      {
+        "abstract": false,
+        "baseContracts": [],
+        "canonicalName": "IERC5192",
+        "contractDependencies": [],
+        "contractKind": "interface",
+        "fullyImplemented": false,
+        "id": 26,
+        "linearizedBaseContracts": [
+          26
+        ],
+        "name": "IERC5192",
+        "nameLocation": "71:8:1",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "anonymous": false,
+            "documentation": {
+              "id": 8,
+              "nodeType": "StructuredDocumentation",
+              "src": "84:202:1",
+              "text": "@notice Emitted when the locking status is changed to locked.\n @dev If a token is minted and the status is locked, this event should be emitted.\n @param tokenId The identifier for a token."
+            },
+            "eventSelector": "032bc66be43dbccb7487781d168eb7bda224628a3b2c3388bdf69b532a3a1611",
+            "id": 12,
+            "name": "Locked",
+            "nameLocation": "295:6:1",
+            "nodeType": "EventDefinition",
+            "parameters": {
+              "id": 11,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 10,
+                  "indexed": false,
+                  "mutability": "mutable",
+                  "name": "tokenId",
+                  "nameLocation": "310:7:1",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 12,
+                  "src": "302:15:1",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 9,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "302:7:1",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "301:17:1"
+            },
+            "src": "289:30:1"
+          },
+          {
+            "anonymous": false,
+            "documentation": {
+              "id": 13,
+              "nodeType": "StructuredDocumentation",
+              "src": "323:206:1",
+              "text": "@notice Emitted when the locking status is changed to unlocked.\n @dev If a token is minted and the status is unlocked, this event should be emitted.\n @param tokenId The identifier for a token."
+            },
+            "eventSelector": "f27b6ce5b2f5e68ddb2fd95a8a909d4ecf1daaac270935fff052feacb24f1842",
+            "id": 17,
+            "name": "Unlocked",
+            "nameLocation": "538:8:1",
+            "nodeType": "EventDefinition",
+            "parameters": {
+              "id": 16,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 15,
+                  "indexed": false,
+                  "mutability": "mutable",
+                  "name": "tokenId",
+                  "nameLocation": "555:7:1",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 17,
+                  "src": "547:15:1",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 14,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "547:7:1",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "546:17:1"
+            },
+            "src": "532:32:1"
+          },
+          {
+            "documentation": {
+              "id": 18,
+              "nodeType": "StructuredDocumentation",
+              "src": "568:212:1",
+              "text": "@notice Returns the locking status of an Soulbound Token\n @dev SBTs assigned to zero address are considered invalid, and queries\n about them do throw.\n @param tokenId The identifier for an SBT."
+            },
+            "functionSelector": "b45a3c0e",
+            "id": 25,
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "locked",
+            "nameLocation": "792:6:1",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 21,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 20,
+                  "mutability": "mutable",
+                  "name": "tokenId",
+                  "nameLocation": "807:7:1",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 25,
+                  "src": "799:15:1",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 19,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "799:7:1",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "798:17:1"
+            },
+            "returnParameters": {
+              "id": 24,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 23,
+                  "mutability": "mutable",
+                  "name": "",
+                  "nameLocation": "-1:-1:-1",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 25,
+                  "src": "839:4:1",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bool",
+                    "typeString": "bool"
+                  },
+                  "typeName": {
+                    "id": 22,
+                    "name": "bool",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "839:4:1",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bool",
+                      "typeString": "bool"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "838:6:1"
+            },
+            "scope": 26,
+            "src": "783:62:1",
+            "stateMutability": "view",
+            "virtual": false,
+            "visibility": "external"
+          }
+        ],
+        "scope": 27,
+        "src": "61:786:1",
+        "usedErrors": []
+      }
+    ],
+    "src": "36:812:1"
+  },
+  "compiler": {
+    "name": "solc",
+    "version": "0.8.17+commit.8df45f5f.Emscripten.clang"
+  },
+  "networks": {},
+  "schemaVersion": "3.4.11",
+  "updatedAt": "2023-01-28T21:39:24.719Z",
+  "devdoc": {
+    "events": {
+      "Locked(uint256)": {
+        "details": "If a token is minted and the status is locked, this event should be emitted.",
+        "params": {
+          "tokenId": "The identifier for a token."
+        }
+      },
+      "Unlocked(uint256)": {
+        "details": "If a token is minted and the status is unlocked, this event should be emitted.",
+        "params": {
+          "tokenId": "The identifier for a token."
+        }
+      }
+    },
+    "kind": "dev",
+    "methods": {
+      "locked(uint256)": {
+        "details": "SBTs assigned to zero address are considered invalid, and queries about them do throw.",
+        "params": {
+          "tokenId": "The identifier for an SBT."
+        }
+      }
+    },
+    "version": 1
+  },
+  "userdoc": {
+    "events": {
+      "Locked(uint256)": {
+        "notice": "Emitted when the locking status is changed to locked."
+      },
+      "Unlocked(uint256)": {
+        "notice": "Emitted when the locking status is changed to unlocked."
+      }
+    },
+    "kind": "user",
+    "methods": {
+      "locked(uint256)": {
+        "notice": "Returns the locking status of an Soulbound Token"
+      }
+    },
+    "version": 1
+  }
+}
