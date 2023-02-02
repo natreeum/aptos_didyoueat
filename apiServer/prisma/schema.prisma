@@ -1,0 +1,39 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "sqlite"
+  url      = env("DATABASE_URL")
+}
+
+model User {
+  wallet_address String @id
+  email          String
+  tokens         Token[]
+}
+
+model Token {
+  token_id            Int         @id
+  created_at          String
+  comment             String?
+  user                User?       @relation(fields: [user_wallet_address], references: [wallet_address])
+  user_wallet_address String
+  collection          Collection? @relation(fields: [collection_id], references: [collection_id])
+  collection_id       String
+}
+
+model Collection {
+  collection_id String  @id
+  img_url       String
+  created_at    String
+  location      String
+  coordinate_x  Int
+  coordinate_y  Int
+  tokens        Token[]
+  minted        Int     @default(0)
+  shop_name     String
+}
