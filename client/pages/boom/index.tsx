@@ -1,3 +1,10 @@
+import storeSBT from "@/public/images/image3.png";
+import Image from "next/image";
+
 export default function Boom() {
-  return <div>두둥등장</div>;
+  return (
+    <div className="boom-sbt">
+      <Image className="flip" src={storeSBT}></Image>
+    </div>
+  );
 }

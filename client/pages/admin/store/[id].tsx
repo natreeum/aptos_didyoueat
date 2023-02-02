@@ -5,6 +5,8 @@ import Image from "next/image";
 import Link from "next/link";
 import { useRouter } from "next/router";
 import { useState } from "react";
+import { QRCodeSVG } from "qrcode.react";
+import storImg from "@/public/images/image3.png";
 
 const StoreDetail = () => {
   const router = useRouter();
@@ -35,12 +37,24 @@ const StoreDetail = () => {
               setToggleImageQr(!toggleImageQr);
             }}
             className={toggleImageQr ? "store-detail__image-qr bigger" : "store-detail__image-qr"}>
-            <Image
-              src="https://images.reactbricks.com/src_set/9e37bdce-6ee2-44da-93e9-2ac1f97e6ca8-500/MillerLite.webp"
-              alt="miler"
-              width={250}
-              height={250}></Image>
-            <Image className="qrexample" src="/images/didyoueatqr.png" alt="qrexample" width={230} height={230}></Image>
+            <Image src={storImg} alt="miler" width={250} height={250}></Image>
+            {/* <Image className="qrexample" src="/images/didyoueatqr.png" alt="qrexample" width={230} height={230}></Image> */}
+            <QRCodeSVG
+              value={"http://172.16.72.235:3000/qr/" + id}
+              size={230}
+              bgColor={"#000000"}
+              fgColor={"#daff5b"}
+              level={"L"}
+              includeMargin={false}
+              // imageSettings={{
+              //   src: "https://static.zpao.com/favicon.png",
+              //   x: undefined,
+              //   y: undefined,
+              //   height: 24,
+              //   width: 24,
+              //   excavate: true,
+              // }}
+            />
           </div>
           <div className="store-detail__description">
             <p>가게이름: Miler Draft</p>
